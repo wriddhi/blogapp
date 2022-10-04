@@ -1,0 +1,118 @@
+[debug] [2022-10-04T19:52:33.212Z] ----------------------------------------------------------------------
+[debug] [2022-10-04T19:52:33.214Z] Command:       /home/linuxbrew/.linuxbrew/Cellar/node/18.10.0/bin/node /home/linuxbrew/.linuxbrew/bin/firebase init
+[debug] [2022-10-04T19:52:33.214Z] CLI Version:   11.13.0
+[debug] [2022-10-04T19:52:33.214Z] Platform:      linux
+[debug] [2022-10-04T19:52:33.214Z] Node Version:  v18.10.0
+[debug] [2022-10-04T19:52:33.215Z] Time:          Wed Oct 05 2022 01:22:33 GMT+0530 (India Standard Time)
+[debug] [2022-10-04T19:52:33.215Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-04T19:52:33.269Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-04T19:52:33.269Z] > authorizing via signed-in user (wriddhihazra@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/wriddhi/Desktop/Web Development/nextJS/blogsite
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-04T19:53:13.270Z] Using project from CLI flag: blog-site-465c1
+[debug] [2022-10-04T19:53:13.273Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blog-site-465c1 [none]
+[debug] [2022-10-04T19:53:14.204Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blog-site-465c1 200
+[debug] [2022-10-04T19:53:14.204Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blog-site-465c1 {"projectId":"blog-site-465c1","projectNumber":"753739900982","displayName":"blog-site","name":"projects/blog-site-465c1","resources":{"hostingSite":"blog-site-465c1","storageBucket":"blog-site-465c1.appspot.com","locationId":"us-east1"},"state":"ACTIVE","etag":"1_dde7be99-1dcd-4404-b248-e333d6a37988"}
+[info] i  Using project blog-site-465c1 (blog-site) 
+[info] 
+=== Firestore Setup
+[debug] [2022-10-04T19:53:15.115Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/blog-site-465c1/services/firestore.googleapis.com [none]
+[debug] [2022-10-04T19:53:15.115Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/blog-site-465c1/services/firestore.googleapis.com x-goog-quota-user=projects/blog-site-465c1
+[debug] [2022-10-04T19:53:17.479Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/blog-site-465c1/services/firestore.googleapis.com 200
+[debug] [2022-10-04T19:53:17.479Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/blog-site-465c1/services/firestore.googleapis.com [omitted]
+[debug] [2022-10-04T19:53:17.480Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/blog-site-465c1 [none]
+[debug] [2022-10-04T19:53:18.499Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/blog-site-465c1 200
+[debug] [2022-10-04T19:53:18.499Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/blog-site-465c1 {"name":"apps/blog-site-465c1","id":"blog-site-465c1","authDomain":"gmail.com","locationId":"us-east1","codeBucket":"staging.blog-site-465c1.appspot.com","servingStatus":"SERVING","defaultHostname":"blog-site-465c1.ue.r.appspot.com","defaultBucket":"blog-site-465c1.appspot.com","serviceAccount":"blog-site-465c1@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-10-04T19:53:18.499Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-10-04T19:53:18.500Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-04T19:53:18.500Z] > authorizing via signed-in user (wriddhihazra@gmail.com)
+[debug] [2022-10-04T19:53:18.500Z] [iam] checking project blog-site-465c1 for permissions ["firebase.projects.get"]
+[debug] [2022-10-04T19:53:18.500Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-site-465c1:testIamPermissions [none]
+[debug] [2022-10-04T19:53:18.500Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-site-465c1:testIamPermissions x-goog-quota-user=projects/blog-site-465c1
+[debug] [2022-10-04T19:53:18.500Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-site-465c1:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-04T19:53:20.343Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-site-465c1:testIamPermissions 200
+[debug] [2022-10-04T19:53:20.343Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blog-site-465c1:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-10-04T19:53:24.884Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/blog-site-465c1/releases pageSize=10&pageToken=
+[debug] [2022-10-04T19:53:26.693Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/blog-site-465c1/releases 200
+[debug] [2022-10-04T19:53:26.693Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/blog-site-465c1/releases {"releases":[{"name":"projects/blog-site-465c1/releases/cloud.firestore","rulesetName":"projects/blog-site-465c1/rulesets/0d48ba27-6531-4cd7-91cb-4101afda445a","createTime":"2022-10-04T18:24:08.621784Z","updateTime":"2022-10-04T18:24:08.621784Z"}]}
+[debug] [2022-10-04T19:53:26.694Z] Found ruleset: projects/blog-site-465c1/rulesets/0d48ba27-6531-4cd7-91cb-4101afda445a
+[debug] [2022-10-04T19:53:26.695Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/blog-site-465c1/rulesets/0d48ba27-6531-4cd7-91cb-4101afda445a [none]
+[debug] [2022-10-04T19:53:28.330Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/blog-site-465c1/rulesets/0d48ba27-6531-4cd7-91cb-4101afda445a 200
+[debug] [2022-10-04T19:53:28.331Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/blog-site-465c1/rulesets/0d48ba27-6531-4cd7-91cb-4101afda445a [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-10-04T19:53:31.263Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/blog-site-465c1/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-10-04T19:53:31.264Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/blog-site-465c1/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-10-04T19:53:33.451Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/blog-site-465c1/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-10-04T19:53:33.452Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/blog-site-465c1/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2022-10-04T19:53:33.861Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/blog-site-465c1/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-10-04T19:53:33.862Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/blog-site-465c1/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/blog-site-465c1/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] ✔  Wrote .next/404.html 
+[debug] [2022-10-04T19:55:19.133Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-10-04T19:55:19.467Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-10-04T19:55:19.467Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.10.0","browserURL":"https://www.gstatic.com/firebasejs/9.10.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.10.0/firebase.tgz"},"live":{"version":"9.10","browserURL":"https://www.gstatic.com/firebasejs/live/9.10/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.10/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.10.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.10.0/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.10.0/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.10.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.10.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.10.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.10.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.10.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.10.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.10.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote .next/index.html 
+[info] 
+[info] i  Detected a .git folder at /home/wriddhi/Desktop/Web Development/nextJS/blogsite 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=662527608&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-10-04T19:55:36.357Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-10-04T19:55:36.360Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-10-04T19:55:36.879Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-10-04T19:55:36.880Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-10-04T19:55:36.903Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-10-04T19:55:37.431Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-10-04T19:55:37.431Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"wriddhi","id":62843840,"node_id":"MDQ6VXNlcjYyODQzODQw","avatar_url":"https://avatars.githubusercontent.com/u/62843840?v=4","gravatar_id":"","url":"https://api.github.com/users/wriddhi","html_url":"https://github.com/wriddhi","followers_url":"https://api.github.com/users/wriddhi/followers","following_url":"https://api.github.com/users/wriddhi/following{/other_user}","gists_url":"https://api.github.com/users/wriddhi/gists{/gist_id}","starred_url":"https://api.github.com/users/wriddhi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/wriddhi/subscriptions","organizations_url":"https://api.github.com/users/wriddhi/orgs","repos_url":"https://api.github.com/users/wriddhi/repos","events_url":"https://api.github.com/users/wriddhi/events{/privacy}","received_events_url":"https://api.github.com/users/wriddhi/received_events","type":"User","site_admin":false,"name":"Wriddhi Hazra","company":null,"blog":"","location":"Kolkata, West Bengal, India","email":null,"hireable":null,"bio":"I love destroying my brain by attempting to solve algorithm problems for hours","twitter_username":null,"public_repos":17,"public_gists":0,"followers":3,"following":2,"created_at":"2020-03-29T14:57:32Z","updated_at":"2022-10-03T10:13:33Z","private_gists":0,"total_private_repos":5,"owned_private_repos":5,"disk_usage":1937,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as wriddhi 
+[info] 
+[debug] [2022-10-04T19:55:51.334Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-10-04T19:55:51.900Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-10-04T19:55:51.901Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-10-04T19:55:52.775Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-10-04T19:55:53.202Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-10-04T19:55:53.203Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-10-04T19:55:55.054Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-10-04T19:55:55.584Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-10-04T19:55:55.584Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
